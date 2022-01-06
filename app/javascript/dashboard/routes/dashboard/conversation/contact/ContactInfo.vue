@@ -10,24 +10,17 @@
       />
 
       <div class="contact--details">
-        <div v-if="showAvatar" class="contact--name-wrap">
-          <h3 class="sub-block-title contact--name">
-            {{ contact.name }}
-          </h3>
+        <h3 v-if="showAvatar" class="sub-block-title contact--name">
           <a
             :href="contactProfileLink"
             class="fs-default"
             target="_blank"
             rel="noopener nofollow noreferrer"
           >
-            <woot-button
-              size="tiny"
-              icon="open"
-              variant="clear"
-              color-scheme="secondary"
-            />
+            {{ contact.name }}
+            <fluent-icon size="16" icon="open" class="open-link--icon" />
           </a>
-        </div>
+        </h3>
         <p v-if="additionalAttributes.description" class="contact--bio">
           {{ additionalAttributes.description }}
         </p>
@@ -301,19 +294,18 @@ export default {
   text-align: left;
 }
 
-.contact--name-wrap {
-  display: flex;
-  align-items: center;
-  margin-bottom: var(--space-small);
-}
-
 .contact--name {
   text-transform: capitalize;
   white-space: normal;
-  margin: 0 var(--space-smaller) 0 0;
 
   a {
     color: var(--color-body);
+  }
+
+  .open-link--icon {
+    color: var(--color-body);
+    font-size: var(--font-size-small);
+    margin-left: var(--space-smaller);
   }
 }
 

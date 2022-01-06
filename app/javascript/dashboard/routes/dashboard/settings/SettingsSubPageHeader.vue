@@ -10,8 +10,8 @@
 <script>
 export default {
   props: {
-    headerTitle: { type: String, default: '' },
-    headerContent: { type: String, default: '' },
+    headerTitle: String,
+    headerContent: String,
   },
 };
 </script>

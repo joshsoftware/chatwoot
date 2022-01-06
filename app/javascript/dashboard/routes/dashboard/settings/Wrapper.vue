@@ -25,9 +25,9 @@ export default {
     SettingsHeader,
   },
   props: {
-    headerTitle: { type: String, default: '' },
-    headerButtonText: { type: String, default: '' },
-    icon: { type: String, default: '' },
+    headerTitle: String,
+    headerButtonText: String,
+    icon: String,
     keepAlive: {
       type: Boolean,
       default: true,

@@ -57,9 +57,9 @@ export default {
     WootSubmitButton,
   },
   props: {
-    resetPasswordToken: { type: String, default: '' },
-    redirectUrl: { type: String, default: '' },
-    config: { type: String, default: '' },
+    resetPasswordToken: String,
+    redirectUrl: String,
+    config: String,
   },
   data() {
     return {

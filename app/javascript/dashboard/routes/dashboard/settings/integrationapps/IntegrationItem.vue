@@ -47,8 +47,8 @@ export default {
   mixins: [globalConfigMixin],
   props: {
     integrationId: {
-      type: [String, Number],
-      required: true,
+      type: String,
+      default: '',
     },
     integrationLogo: {
       type: String,

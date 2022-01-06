@@ -61,10 +61,10 @@ export default {
     Modal,
   },
   props: {
-    id: { type: Number, default: null },
-    edcontent: { type: String, default: '' },
-    edshortCode: { type: String, default: '' },
-    onClose: { type: Function, default: () => {} },
+    id: Number,
+    edcontent: String,
+    edshortCode: String,
+    onClose: Function,
   },
   data() {
     return {

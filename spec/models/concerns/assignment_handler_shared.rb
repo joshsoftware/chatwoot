@@ -79,9 +79,7 @@ shared_examples_for 'assignment_handler' do
     end
 
     it 'dispaches assignee changed event' do
-      # TODO: FIX me
-      # expect(EventDispatcherJob).to(have_been_enqueued.at_least(:once).with('assignee.changed', anything, anything, anything, anything))
-      expect(EventDispatcherJob).to(have_been_enqueued.at_least(:once))
+      expect(EventDispatcherJob).to(have_been_enqueued.at_least(:once).with('assignee.changed', anything, anything))
       expect(update_assignee).to eq(true)
     end
 

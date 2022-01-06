@@ -11,7 +11,7 @@
 <script>
 export default {
   props: {
-    message: { type: String, default: '' },
+    message: String,
     showButton: Boolean,
     duration: {
       type: [String, Number],

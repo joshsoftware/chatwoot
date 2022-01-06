@@ -18,11 +18,12 @@
 export default {
   props: {
     disabled: Boolean,
-    type: { type: String, default: '' },
-    size: { type: String, default: '' },
+    isFullwidth: Boolean,
+    type: String,
+    size: String,
     checked: Boolean,
-    name: { type: String, default: '' },
-    id: { type: String, default: '' },
+    name: String,
+    id: String,
   },
   data() {
     return {

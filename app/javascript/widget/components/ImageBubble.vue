@@ -19,11 +19,7 @@
 
 <script>
 export default {
-  props: {
-    url: { type: String, default: '' },
-    thumb: { type: String, default: '' },
-    readableTime: { type: String, default: '' },
-  },
+  props: ['url', 'thumb', 'readableTime'],
   methods: {
     onImgError() {
       this.$emit('error');
