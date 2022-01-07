@@ -6,7 +6,7 @@ class AddLockedAttributeToInstallationConfig < ActiveRecord::Migration[6.0]
   end
 
   def down
-    remove_column :installation_configs, :locked
+    # remove_column :installation_configs, :locked
     remove_index :installation_configs, :name
   end
 
