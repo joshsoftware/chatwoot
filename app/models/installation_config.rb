@@ -17,7 +17,7 @@
 class InstallationConfig < ApplicationRecord
   serialize :serialized_value, HashWithIndifferentAccess
 
-  # before_validation :set_lock
+  before_validation :set_lock
   validates :name, presence: true
 
   default_scope { order(created_at: :desc) }
@@ -37,9 +37,9 @@ class InstallationConfig < ApplicationRecord
 
   private
 
-  # def set_lock
-  #   self.locked = true if locked.nil?
-  # end
+  def set_lock
+    self.locked = true if locked.nil?
+  end
 
   def clear_cache
     GlobalConfig.clear_cache
