@@ -19,6 +19,6 @@ test:
 
 production:
   <<: *default
-  username: postgres
-  password: postgres
+  username: sparkode
+  password: sparkode
   database: chatwoot_prod
